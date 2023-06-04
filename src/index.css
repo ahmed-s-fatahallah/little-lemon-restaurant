@@ -1,3 +1,11 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -18,5 +26,5 @@ code {
 #root {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: 13rem 40rem 73rem 58rem 57.5rem 41.8rem;
+  grid-template-rows: [header-start]13rem[header-end main-start] 228.5rem[main-end footer-start] 41.8rem[footer-end];
 }
