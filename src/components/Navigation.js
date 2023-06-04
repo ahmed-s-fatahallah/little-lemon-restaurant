@@ -1,25 +1,17 @@
+import NavigationItem from "./NavigationItem";
+
+import classes from "./Navigation.module.css";
+
 const Navigation = () => {
   return (
     <nav>
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Menu</a>
-        </li>
-        <li>
-          <a href="#">Reservations</a>
-        </li>
-        <li>
-          <a href="#">Order online</a>
-        </li>
-        <li>
-          <a href="#">Login</a>
-        </li>
+      <ul className={classes.nav__list}>
+        <NavigationItem text="Home" link="#" />
+        <NavigationItem text="About" link="#" />
+        <NavigationItem text="Menu" link="#" />
+        <NavigationItem text="Reservations" link="#" />
+        <NavigationItem text="Order Online" link="#" />
+        <NavigationItem text="Login" link="#" />
       </ul>
     </nav>
   );

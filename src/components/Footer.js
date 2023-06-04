@@ -3,9 +3,11 @@ import FooterNav from "./FooterNav";
 import FooterContact from "./FooterContact";
 import FooterSocials from "./FooterSocials";
 
+import classes from "./Footer.module.css"
+
 const Footer = () => {
   return (
-    <footer>
+    <footer className={classes.footer}>
       <div>
         <img src={FooterLogo} alt="Little Lemon restaurant Logo" />
       </div>
