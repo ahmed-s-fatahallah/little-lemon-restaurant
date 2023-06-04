@@ -1,23 +1,18 @@
-const FooterSocials = () => {
+import FooterContentItem from "./FooterContentItem";
+const FooterSocials = (props) => {
   return (
     <div>
-      <p>Social Media Links</p>
+      <p>{props.title}</p>
       <ul>
-        <li>
-          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
-            Facebook
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
-            Twitter
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
-            Instagram
-          </a>
-        </li>
+        <FooterContentItem
+          link="https://www.facebook.com"
+          linkText="Facebook"
+        />
+        <FooterContentItem link="https://www.twitter.com" linkText="Twitter" />
+        <FooterContentItem
+          link="https://www.instagram.com"
+          linkText="Instagram"
+        />
       </ul>
     </div>
   );

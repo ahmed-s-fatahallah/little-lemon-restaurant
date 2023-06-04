@@ -1,17 +1,13 @@
-const FooterContact = () => {
+import FooterContentItem from "./FooterContentItem";
+
+const FooterContact = (props) => {
   return (
     <div>
-      <p>Contact</p>
+      <p>{props.title}</p>
       <ul>
-        <li>
-          <a href="#">Address</a>
-        </li>
-        <li>
-          <a href="tel:">Phone Number</a>
-        </li>
-        <li>
-          <a href="mailto:">Email</a>
-        </li>
+        <FooterContentItem link="#" linkText="Address" />
+        <FooterContentItem link="tel:" linkText="Phone Number" />
+        <FooterContentItem link="mailto:" linkText="Email" />
       </ul>
     </div>
   );

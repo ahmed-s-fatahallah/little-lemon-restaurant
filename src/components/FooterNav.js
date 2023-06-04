@@ -1,26 +1,16 @@
-const FooterNav = () => {
+import FooterContentItem from "./FooterContentItem";
+
+const FooterNav = (props) => {
   return (
     <div>
-      <p>Navigation</p>
+      <p>{props.title}</p>
       <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Menu</a>
-        </li>
-        <li>
-          <a href="#">Reservations</a>
-        </li>
-        <li>
-          <a href="#">Order online</a>
-        </li>
-        <li>
-          <a href="#">Login</a>
-        </li>
+        <FooterContentItem link="#" linkText="Home" />
+        <FooterContentItem link="#" linkText="About" />
+        <FooterContentItem link="#" linkText="Menu" />
+        <FooterContentItem link="#" linkText="Reservations" />
+        <FooterContentItem link="#" linkText="Order Online" />
+        <FooterContentItem link="#" linkText="Login" />
       </ul>
     </div>
   );
