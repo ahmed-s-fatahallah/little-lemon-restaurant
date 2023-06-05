@@ -1,5 +1,5 @@
 import restaurantFood from "./../../../assets/restauranfood.jpg";
-import MainButton from "./../../../Utlities/MainButton";
+import MainButton from "../../../Utlities/MainButton";
 
 import classes from "./HeroSection.module.css";
 

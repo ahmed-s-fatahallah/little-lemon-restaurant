@@ -16,4 +16,5 @@
 .footer__item a:hover,
 .footer__item a:active {
   color: #495e57;
+  text-decoration: underline;
 }
