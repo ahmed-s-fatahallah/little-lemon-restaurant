@@ -1,0 +1,93 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+
+  width: 26.5rem;
+  height: 44rem;
+  background-color: #edefee;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.card__img {
+  display: block;
+  width: 26.5rem;
+  height: 18.5rem;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.28rem;
+}
+
+.card__header__title {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+
+  color: #000000;
+}
+
+.card__header__price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+
+  color: #ee9972;
+}
+
+.card__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  color: #495e57;
+  font-variation-settings: "slnt" 0;
+
+  height: 12rem;
+}
+
+.card__link {
+  display: flex;
+  gap: 1.4rem;
+
+  margin-top: 2.5rem;
+}
+.card__link__order:link,
+.card__link__order:visited {
+  text-decoration: none;
+
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #333333;
+}
+
+.card__link__order:hover,
+.card__link__order:active {
+  text-decoration: underline;
+}
+
+.card__link__icon {
+  width: 2rem;
+}

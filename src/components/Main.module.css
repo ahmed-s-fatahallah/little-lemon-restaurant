@@ -1,8 +1,0 @@
-.main-content {
-  grid-column: 1/-1;
-  grid-row: main-start/main-end;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: [hero-start] 40rem [hero-end highlights-start] 73rem [highlights-end testimonials-start] 58rem [testimonials-end about-start] 58rem [about-end];
-}
