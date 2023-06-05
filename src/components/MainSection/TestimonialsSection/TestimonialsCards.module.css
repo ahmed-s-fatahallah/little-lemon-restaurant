@@ -1,0 +1,8 @@
+.testimonials__cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.218rem;
+
+  margin-top: 4.4rem;
+}

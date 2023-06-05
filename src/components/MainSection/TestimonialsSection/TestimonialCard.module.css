@@ -1,0 +1,56 @@
+.testimonial {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+
+  width: 18.639rem;
+  aspect-ratio: 1/1;
+
+  padding: 2.41rem 1.71rem 1.88rem;
+}
+.testimonial__rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 2.2rem;
+}
+.testimonial__rating__star {
+  width: 1.6rem;
+  aspect-ratio: 1/1;
+}
+
+.testimonial__fig {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.testimonial__fig img {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.testimonial__fig__caption {
+  display: inline-block;
+  line-height: 1.7;
+  margin-left: 1rem;
+}
+
+.testimonial__author {
+  color: #333333;
+  display: block;
+}
+
+.testimonial__user {
+  color: #6e6f6e;
+  display: block;
+}
+
+.testimonial__quote {
+  color: #6e6f6e;
+
+  margin-top: 2.1rem;
+}
