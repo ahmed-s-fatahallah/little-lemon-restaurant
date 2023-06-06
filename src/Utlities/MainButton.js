@@ -2,8 +2,8 @@ import classes from "./MainButton.module.css";
 
 const MainButton = (props) => {
   return (
-    <button className={classes.btn}>
-      <p className={classes.btn__text}>{props.text}</p>
+    <button type={props.type} className={classes.btn}>
+      {props.text}
     </button>
   );
 };
