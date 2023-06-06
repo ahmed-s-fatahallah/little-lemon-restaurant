@@ -24,3 +24,9 @@
 .btn:hover {
   cursor: pointer;
 }
+
+.btn:disabled {
+  background-color: #999999c4;
+  cursor: not-allowed;
+  box-shadow: none;
+}

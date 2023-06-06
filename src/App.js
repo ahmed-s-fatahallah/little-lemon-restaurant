@@ -1,15 +1,9 @@
-import Footer from "./components/FooterComponents/Footer";
-import Header from "./components/HeaderComponents/Header";
-import Main from "./components/MainSection/Main";
+import Booking from "./pages/Booking";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
-  );
+  // return <Home />;
+  return <Booking />;
 }
 
 export default App;
