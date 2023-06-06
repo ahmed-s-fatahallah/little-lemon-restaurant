@@ -22,9 +22,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-#root {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: [header-start]13rem[header-end main-start] 250rem[main-end footer-start] 41.8rem[footer-end];
-}
