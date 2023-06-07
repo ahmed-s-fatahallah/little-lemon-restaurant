@@ -1,4 +1,4 @@
-import MainButton from "../../../Utlities/MainButton";
+import MainButton from "../../../Utlities/MainLinkButton";
 import CardsSection from "./CardsSection";
 
 import classes from "./Highlights.module.css";

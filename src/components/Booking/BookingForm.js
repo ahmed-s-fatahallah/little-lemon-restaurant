@@ -1,8 +1,9 @@
 import { useState } from "react";
-import MainButton from "../../Utlities/MainButton";
+import ReserveBtn from "../../Utlities/ReserveBtn";
+
 import classes from "./BookingForm.module.css";
 
-const BookingForm = () => {
+const BookingForm = (props) => {
   const [dateInput, setDateInput] = useState("");
   const [timeSelect, setTimeSelect] = useState("");
   const [guestsInput, setGuestsInput] = useState("");
@@ -25,9 +26,14 @@ const BookingForm = () => {
 
   const submitFormHandler = (event) => {
     event.preventDefault();
+    props.setAvailableTimes(timeSelect);
     console.log(
       `date: ${dateInput}, time: ${timeSelect}, guests number: ${guestsInput}, occasion: ${occasionSelect}`
     );
+    setDateInput("");
+    setTimeSelect("");
+    setGuestsInput("");
+    setOccasionSelect("");
   };
 
   if (
@@ -53,12 +59,11 @@ const BookingForm = () => {
         <option value="" disabled hidden>
           None
         </option>
-        <option>17:00</option>
-        <option>18:00</option>
-        <option>19:00</option>
-        <option>20:00</option>
-        <option>21:00</option>
-        <option>22:00</option>
+        {props.availableTimes.map((time) => (
+          <option key={time} value={time}>
+            {time}
+          </option>
+        ))}
       </select>
       <label htmlFor="guests">Number of guests</label>
       <input
@@ -82,7 +87,7 @@ const BookingForm = () => {
         <option>Birthday</option>
         <option>Anniversary</option>
       </select>
-      <MainButton
+      <ReserveBtn
         disabled={isBtnDisabled}
         type="submit"
         text="Make your Reservation"

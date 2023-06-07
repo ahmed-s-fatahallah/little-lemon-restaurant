@@ -1,5 +1,5 @@
 import restaurantFood from "./../../../assets/restauranfood.jpg";
-import MainButton from "../../../Utlities/MainButton";
+import MainButton from "../../../Utlities/MainLinkButton";
 
 import classes from "./HeroSection.module.css";
 
@@ -13,7 +13,7 @@ const HeroSection = () => {
           We are family owned Mediterranean restaurant, focused on traditional
           recipes served with modern twist.
         </p>
-        <MainButton text="Reserve a Table" />
+        <MainButton link="booking" text="Reserve a Table" />
       </div>
       <img
         className={classes.hero__img}
