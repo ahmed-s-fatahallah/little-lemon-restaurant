@@ -8,13 +8,14 @@
   line-height: 23px;
 }
 
-.nav__list__item a:link,
-.nav__list__item a:visited {
+a:link,
+a:visited {
   text-decoration: none;
   color: currentColor;
 }
-.nav__list__item a:hover,
-.nav__list__item a:active {
+a:hover,
+a:active,
+.nav__list__item .active {
   color: #495e57;
   text-decoration: underline;
 }

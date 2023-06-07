@@ -1,8 +1,9 @@
-.btn {
+.btn:link,
+.btn:visited {
+  display: inline-block;
   background-color: #f4ce14;
-  border-radius: 15px;
-  width: 24.9rem;
-  height: 6rem;
+  border-radius: 16px;
+  padding: 1.5rem 3rem;
   border: none;
 
   font-family: "Karla";
@@ -11,22 +12,17 @@
   font-size: 2.4rem;
   line-height: 2.8rem;
   color: #333333;
+  text-align: center;
+  text-decoration: none;
 
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 
   margin-top: 1.5rem;
 }
 
-.btn:active {
-  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.8);
-}
-
 .btn:hover {
   cursor: pointer;
 }
-
-.btn:disabled {
-  background-color: #999999c4;
-  cursor: not-allowed;
-  box-shadow: none;
+.btn:active {
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.8);
 }
