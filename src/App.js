@@ -1,30 +1,44 @@
-import { useReducer, useState } from "react";
+import { useCallback, useEffect, useReducer } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Booking from "./pages/Booking";
 import Home from "./pages/Home";
-
 import Root from "./pages/Root";
 import About from "./pages/About";
-
-const AVAILABLE_TIMES = ["16:00", "17:00", "18:00", "19:00", "20:00"];
+import { fetchAPI } from "./JavaScript API file/raw.githubusercontent.com_Meta-Front-End-Developer-PC_capstone_master_api";
 
 const reducer = (state, action) => {
-  if (action.type === "update") {
-    const selectedTime = action.time;
-    return state.filter((time) => time !== selectedTime);
+  if (action.type === "initialTimes") {
+    const initTimes = action.initialTimes;
+    return [...initTimes];
   }
+  if (action.type === "dateUpdate") {
+    const newTimes = action.times;
+    return [...newTimes];
+  }
+
   return state;
 };
 
 function App() {
-  const [availableTimes, dispatch] = useReducer(reducer, AVAILABLE_TIMES);
+  const [availableTimes, dispatch] = useReducer(reducer, []);
+  console.log(availableTimes);
 
-  const updateTimes = (time) => {
-    dispatch({ type: "update", time: time });
+  const initializeTimes = (initialTimes) => {
+    dispatch({ type: "initialTimes", initialTimes: initialTimes });
   };
-  const initializeTimes = () => {
-    return availableTimes;
+  const updateTimes = (times) => {
+    dispatch({ type: "dateUpdate", times: times });
   };
+
+  const fetchData = useCallback(async () => {
+    const date = new Date();
+    const times = await fetchAPI(date);
+    initializeTimes(times);
+  }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   const router = createBrowserRouter([
     {

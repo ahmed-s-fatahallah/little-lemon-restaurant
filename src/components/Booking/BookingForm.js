@@ -1,13 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReserveBtn from "../../Utlities/ReserveBtn";
+import {
+  fetchAPI,
+  submitAPI,
+} from "./../../JavaScript API file/raw.githubusercontent.com_Meta-Front-End-Developer-PC_capstone_master_api";
 
 import classes from "./BookingForm.module.css";
 
+const date = new Date();
+
+const minDate =
+  date.getFullYear() +
+  "-" +
+  String(date.getMonth() + 1).padStart(2, "0") +
+  "-" +
+  String(date.getDate()).padStart(2, "0");
+
+const maxDate =
+  date.getFullYear() +
+  "-" +
+  String(date.getMonth() + 3).padStart(2, "0") +
+  "-" +
+  String(date.getDate()).padStart(2, "0");
+
 const BookingForm = (props) => {
-  const [dateInput, setDateInput] = useState("");
+  const [dateInput, setDateInput] = useState(minDate);
   const [timeSelect, setTimeSelect] = useState("");
   const [guestsInput, setGuestsInput] = useState("");
   const [occasionSelect, setOccasionSelect] = useState("");
+
+  useEffect(() => {
+    const chosenDate = new Date(dateInput);
+    const availableTimes = fetchAPI(chosenDate);
+    props.setAvailableTimes(availableTimes);
+  }, [dateInput]);
 
   let isBtnDisabled = true;
 
@@ -24,16 +50,24 @@ const BookingForm = (props) => {
     setOccasionSelect(event.target.value);
   };
 
+  const submitDataHandler = async () => {
+    await submitAPI({
+      dateInput,
+      timeSelect,
+      guestsInput,
+      occasionSelect,
+    });
+  };
+
   const submitFormHandler = (event) => {
     event.preventDefault();
-    props.setAvailableTimes(timeSelect);
-    console.log(
-      `date: ${dateInput}, time: ${timeSelect}, guests number: ${guestsInput}, occasion: ${occasionSelect}`
-    );
-    setDateInput("");
+
+    setDateInput(minDate);
     setTimeSelect("");
     setGuestsInput("");
     setOccasionSelect("");
+
+    submitDataHandler();
   };
 
   if (
@@ -52,6 +86,8 @@ const BookingForm = (props) => {
         onChange={dateInputHandler}
         value={dateInput}
         type="date"
+        min={minDate}
+        max={maxDate}
         id="res-date"
       />
       <label htmlFor="res-time">Choose time</label>
@@ -59,8 +95,8 @@ const BookingForm = (props) => {
         <option value="" disabled hidden>
           None
         </option>
-        {props.availableTimes.map((time) => (
-          <option key={time} value={time}>
+        {props.availableTimes.map((time, i) => (
+          <option key={i} value={time}>
             {time}
           </option>
         ))}
