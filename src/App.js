@@ -4,7 +4,11 @@ import Booking from "./pages/Booking";
 import Home from "./pages/Home";
 import Root from "./pages/Root";
 import About from "./pages/About";
-import { fetchAPI } from "./JavaScript API file/raw.githubusercontent.com_Meta-Front-End-Developer-PC_capstone_master_api";
+import {
+  fetchAPI,
+  submitAPI,
+} from "./JavaScript API file/raw.githubusercontent.com_Meta-Front-End-Developer-PC_capstone_master_api";
+import Confirmation from "./pages/Confirmation";
 
 const reducer = (state, action) => {
   if (action.type === "initialTimes") {
@@ -21,13 +25,17 @@ const reducer = (state, action) => {
 
 function App() {
   const [availableTimes, dispatch] = useReducer(reducer, []);
-  console.log(availableTimes);
 
   const initializeTimes = (initialTimes) => {
     dispatch({ type: "initialTimes", initialTimes: initialTimes });
   };
   const updateTimes = (times) => {
     dispatch({ type: "dateUpdate", times: times });
+  };
+
+  const submitForm = async (formData) => {
+    const response = await submitAPI(formData);
+    return response;
   };
 
   const fetchData = useCallback(async () => {
@@ -55,8 +63,13 @@ function App() {
             <Booking
               availableTimes={availableTimes}
               setAvailableTimes={updateTimes}
+              submitForm={submitForm}
             />
           ),
+        },
+        {
+          path: "booking/confirmed",
+          element: <Confirmation />,
         },
         {
           path: "about",

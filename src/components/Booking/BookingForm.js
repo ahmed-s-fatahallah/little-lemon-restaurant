@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import ReserveBtn from "../../Utlities/ReserveBtn";
-import {
-  fetchAPI,
-  submitAPI,
-} from "./../../JavaScript API file/raw.githubusercontent.com_Meta-Front-End-Developer-PC_capstone_master_api";
+import { fetchAPI } from "./../../JavaScript API file/raw.githubusercontent.com_Meta-Front-End-Developer-PC_capstone_master_api";
+import { useNavigate } from "react-router-dom";
 
 import classes from "./BookingForm.module.css";
 
@@ -35,6 +33,8 @@ const BookingForm = (props) => {
     props.setAvailableTimes(availableTimes);
   }, [dateInput]);
 
+  const navigate = useNavigate();
+
   let isBtnDisabled = true;
 
   const dateInputHandler = (event) => {
@@ -50,15 +50,6 @@ const BookingForm = (props) => {
     setOccasionSelect(event.target.value);
   };
 
-  const submitDataHandler = async () => {
-    await submitAPI({
-      dateInput,
-      timeSelect,
-      guestsInput,
-      occasionSelect,
-    });
-  };
-
   const submitFormHandler = (event) => {
     event.preventDefault();
 
@@ -67,7 +58,16 @@ const BookingForm = (props) => {
     setGuestsInput("");
     setOccasionSelect("");
 
-    submitDataHandler();
+    const response = props.submitForm({
+      dateInput,
+      timeSelect,
+      guestsInput,
+      occasionSelect,
+    });
+
+    if (response) {
+      navigate("confirmed");
+    }
   };
 
   if (

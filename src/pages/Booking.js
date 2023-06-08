@@ -5,7 +5,7 @@ const Booking = (props) => {
     <BookingForm
       availableTimes={props.availableTimes}
       setAvailableTimes={props.setAvailableTimes}
-      reservedTime={props.reservedTime}
+      submitForm={props.submitForm}
     />
   );
 };
