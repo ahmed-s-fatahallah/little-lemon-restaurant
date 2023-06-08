@@ -27,11 +27,13 @@ const BookingForm = (props) => {
   const [guestsInput, setGuestsInput] = useState("");
   const [occasionSelect, setOccasionSelect] = useState("");
 
+  const { setAvailableTimes } = props;
+
   useEffect(() => {
     const chosenDate = new Date(dateInput);
     const availableTimes = fetchAPI(chosenDate);
-    props.setAvailableTimes(availableTimes);
-  }, [dateInput]);
+    setAvailableTimes(availableTimes);
+  }, [dateInput, setAvailableTimes]);
 
   const navigate = useNavigate();
 

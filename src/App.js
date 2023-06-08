@@ -29,9 +29,10 @@ function App() {
   const initializeTimes = (initialTimes) => {
     dispatch({ type: "initialTimes", initialTimes: initialTimes });
   };
-  const updateTimes = (times) => {
+
+  const updateTimes = useCallback((times) => {
     dispatch({ type: "dateUpdate", times: times });
-  };
+  }, []);
 
   const submitForm = async (formData) => {
     const response = await submitAPI(formData);
