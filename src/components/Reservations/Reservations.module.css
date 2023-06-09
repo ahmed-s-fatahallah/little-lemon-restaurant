@@ -1,0 +1,24 @@
+.table {
+  font-size: 3.5rem;
+  margin: 5rem auto;
+
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 500;
+}
+
+.table thead {
+  background-color: #495e57;
+  color: #f4ce14;
+}
+
+.table,
+.table td,
+.table th {
+  border: 2px solid #333;
+  padding: 1rem;
+}
+.table td {
+  color: #495e57;
+  text-align: center;
+}

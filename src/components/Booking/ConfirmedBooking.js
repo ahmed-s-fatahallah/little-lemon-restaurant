@@ -14,7 +14,7 @@ const ConfirmedBooking = () => {
     return () => {
       clearTimeout(timer);
       if (redirectTimer <= 1) {
-        navigate("/");
+        navigate("/", { replace: true });
       }
     };
   });

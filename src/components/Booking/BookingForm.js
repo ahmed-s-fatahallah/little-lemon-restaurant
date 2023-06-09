@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { AppStore } from "../../store/Context";
 import ReserveBtn from "../../Utlities/ReserveBtn";
 import { fetchAPI } from "./../../JavaScript API file/raw.githubusercontent.com_Meta-Front-End-Developer-PC_capstone_master_api";
 import { useNavigate } from "react-router-dom";
@@ -27,6 +28,8 @@ const BookingForm = (props) => {
   const [guestsInput, setGuestsInput] = useState("");
   const [occasionSelect, setOccasionSelect] = useState("");
 
+  const ctx = useContext(AppStore);
+
   const { setAvailableTimes } = props;
 
   useEffect(() => {
@@ -54,6 +57,7 @@ const BookingForm = (props) => {
 
   const submitFormHandler = (event) => {
     event.preventDefault();
+    const id = new Date().getMilliseconds().toString();
 
     setDateInput(minDate);
     setTimeSelect("");
@@ -61,6 +65,7 @@ const BookingForm = (props) => {
     setOccasionSelect("");
 
     const response = props.submitForm({
+      id: id,
       dateInput,
       timeSelect,
       guestsInput,
@@ -68,6 +73,14 @@ const BookingForm = (props) => {
     });
 
     if (response) {
+      ctx.addReservation({
+        id: id,
+        date: dateInput,
+        time: timeSelect,
+        guests: guestsInput,
+        occasion: occasionSelect,
+      });
+
       navigate("confirmed");
     }
   };

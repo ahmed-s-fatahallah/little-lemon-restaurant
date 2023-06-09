@@ -4,6 +4,8 @@ import Booking from "./pages/Booking";
 import Home from "./pages/Home";
 import Root from "./pages/Root";
 import About from "./pages/About";
+import ReservationsPage from "./pages/Reservations";
+
 import {
   fetchAPI,
   submitAPI,
@@ -36,6 +38,7 @@ function App() {
 
   const submitForm = async (formData) => {
     const response = await submitAPI(formData);
+
     return response;
   };
 
@@ -75,6 +78,10 @@ function App() {
         {
           path: "about",
           element: <About />,
+        },
+        {
+          path: "reservations",
+          element: <ReservationsPage />,
         },
       ],
     },
