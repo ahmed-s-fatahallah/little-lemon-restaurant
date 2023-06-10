@@ -72,7 +72,7 @@ function App() {
           ),
         },
         {
-          path: "booking/confirmed",
+          path: "booking/confirmed/:id",
           element: <Confirmation />,
         },
         {
