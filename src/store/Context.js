@@ -9,7 +9,14 @@ export const AppStore = createContext({
 const AppStoreProvider = (props) => {
   const addReservation = (resData) => {
     const prevRes = JSON.parse(localStorage.getItem("reservations"));
-    localStorage.setItem("reservations", JSON.stringify([...prevRes, resData]));
+    if (prevRes) {
+      localStorage.setItem(
+        "reservations",
+        JSON.stringify([...prevRes, resData])
+      );
+    } else {
+      localStorage.setItem("reservations", JSON.stringify([resData]));
+    }
   };
 
   return (
