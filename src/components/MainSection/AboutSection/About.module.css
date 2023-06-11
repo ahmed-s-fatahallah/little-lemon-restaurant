@@ -64,3 +64,32 @@
   top: 0%;
   left: 80%;
 }
+
+@media screen and (max-width: 1125px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about__content {
+    width: 100%;
+    padding: 1rem 4rem;
+    margin-top: 4rem;
+  }
+
+  .about__content h2 {
+    margin-bottom: 1rem;
+  }
+
+  .about__photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+  .about__photos__1 {
+    position: static;
+  }
+  .about__photos__2 {
+    position: static;
+  }
+}

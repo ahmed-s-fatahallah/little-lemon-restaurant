@@ -10,7 +10,7 @@ const Highlights = () => {
         <h3 className={classes.highlights__header__title}>
           This week’s Specials!
         </h3>
-        <MainButton text="Online Menu" />
+        <MainButton link="menu" text="Online Menu" />
       </div>
       <CardsSection />
     </section>

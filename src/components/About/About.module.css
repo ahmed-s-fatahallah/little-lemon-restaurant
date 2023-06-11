@@ -33,5 +33,29 @@
 }
 
 .about__imgs img:first-of-type {
-  margin-right: 8rem;
+  margin-right: 5rem;
+}
+
+@media screen and (max-width: 1380px) {
+  .about__imgs img {
+    height: 40rem;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .about__imgs img {
+    height: 30rem;
+  }
+  .about__imgs img:first-of-type {
+    margin-right: 10rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .about {
+    width: 100%;
+    padding: 2rem 4rem;
+  }
+  .about__imgs img:first-of-type {
+    margin-right: 5rem;
+  }
 }

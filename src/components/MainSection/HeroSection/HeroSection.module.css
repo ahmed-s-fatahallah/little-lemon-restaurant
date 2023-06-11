@@ -53,3 +53,22 @@
 
   color: #edefee;
 }
+
+@media screen and (max-width: 560px) {
+  .hero {
+    gap: 5rem;
+  }
+
+  .hero__content {
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .hero__img {
+    margin-right: 4rem;
+  }
+
+  .hero__text {
+    margin-bottom: 4rem;
+  }
+}

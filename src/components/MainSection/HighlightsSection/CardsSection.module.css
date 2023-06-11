@@ -4,3 +4,9 @@
   align-items: center;
   gap: 6rem;
 }
+
+@media screen and (max-width: 560px) {
+  .cards {
+    flex-direction: column;
+  }
+}

@@ -39,3 +39,9 @@
   text-align: center;
   margin-top: 12.5rem;
 }
+
+@media screen and (max-width: 560px) {
+  .testimonials__title {
+    margin-top: 1rem;
+  }
+}

@@ -16,6 +16,7 @@ footer img {
   width: 16.2rem;
   height: 27.9rem;
   margin-right: 7rem;
+  margin-left: 3rem;
 }
 
 .footer__content {
@@ -40,4 +41,18 @@ footer img {
   color: #495e57;
   margin-top: 0;
   margin-bottom: 2.4rem;
+}
+
+@media screen and (max-width: 560px) {
+  .footer__content {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  footer img {
+    display: block;
+    width: 10rem;
+    height: 20rem;
+  }
 }

@@ -19,3 +19,9 @@ a:active,
   color: #495e57;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 510px) {
+  .nav__list__item {
+    font-size: 3rem;
+  }
+}

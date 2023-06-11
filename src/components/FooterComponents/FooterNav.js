@@ -5,12 +5,11 @@ const FooterNav = (props) => {
     <div>
       <p>{props.title}</p>
       <ul>
-        <FooterContentItem link="#" linkText="Home" />
-        <FooterContentItem link="#" linkText="About" />
-        <FooterContentItem link="#" linkText="Menu" />
-        <FooterContentItem link="#" linkText="Reservations" />
-        <FooterContentItem link="#" linkText="Order Online" />
-        <FooterContentItem link="#" linkText="Login" />
+        <FooterContentItem link="/" linkText="Home" />
+        <FooterContentItem link="/about" linkText="About" />
+        <FooterContentItem link="/menu" linkText="Menu" />
+        <FooterContentItem link="/reservations" linkText="Reservations" />
+        <FooterContentItem link="/order" linkText="Order Online" />
       </ul>
     </div>
   );

@@ -1,16 +1,85 @@
 .header {
-  grid-column: 1/-1;
-  grid-row: header-start/ header-end;
-
   display: flex;
   justify-content: center;
   align-items: center;
 
   padding: 2rem 0;
+
+  position: relative;
 }
 
 .header img {
   display: block;
   width: 20rem;
   margin-right: 5rem;
+}
+.hamburger__container {
+  display: none;
+}
+
+@media screen and (max-width: 510px) {
+  .header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hamburger__container {
+    display: block;
+    position: absolute;
+    height: 5rem;
+    left: 3rem;
+    top: 2.5rem;
+    cursor: pointer;
+  }
+
+  .hamburger__container.active .hamburger__container__btn {
+    height: 0;
+  }
+
+  .hamburger__container.active .hamburger__container__btn::before {
+    transform: rotate(45deg);
+    transform-origin: center;
+    top: 0;
+    transition: all 0.3s ease-in;
+  }
+  .hamburger__container.active .hamburger__container__btn::after {
+    transform: rotate(-45deg);
+    transform-origin: center;
+    top: 0;
+    transition: all 0.3s ease-in;
+  }
+
+  .hamburger__container__btn {
+    display: block;
+    width: 5rem;
+    height: 0.8rem;
+    border-radius: 16px;
+    position: relative;
+    background-color: #495e57;
+
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hamburger__container__btn::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 0.8rem;
+    border-radius: 16px;
+    background-color: #495e57;
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+  }
+  .hamburger__container__btn::before {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 0.8rem;
+    border-radius: 16px;
+    background-color: #495e57;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+  }
 }

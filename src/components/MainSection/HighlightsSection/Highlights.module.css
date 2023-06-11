@@ -23,3 +23,9 @@
 
   color: #000000;
 }
+
+@media screen and (max-width: 460px) {
+  .highlights__header__title {
+    font-size: 5rem;
+  }
+}
