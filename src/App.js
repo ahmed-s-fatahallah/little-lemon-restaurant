@@ -11,6 +11,7 @@ import {
 } from "./JavaScript API file/raw.githubusercontent.com_Meta-Front-End-Developer-PC_capstone_master_api";
 import Confirmation from "./pages/Confirmation";
 import AboutPage from "./pages/About";
+import ErrorPage from "./pages/ErrorPage";
 
 const reducer = (state, action) => {
   if (action.type === "initialTimes") {
@@ -56,10 +57,12 @@ function App() {
     {
       path: "/",
       element: <Root />,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,
           element: <Home />,
+          errorElement: <ErrorPage />,
         },
         {
           path: "booking",
@@ -70,18 +73,22 @@ function App() {
               submitForm={submitForm}
             />
           ),
+          errorElement: <ErrorPage />,
         },
         {
           path: "booking/confirmed/:id",
           element: <Confirmation />,
+          errorElement: <ErrorPage />,
         },
         {
           path: "about",
           element: <AboutPage />,
+          errorElement: <ErrorPage />,
         },
         {
           path: "reservations",
           element: <ReservationsPage />,
+          errorElement: <ErrorPage />,
         },
       ],
     },

@@ -11,7 +11,6 @@ const Navigation = () => {
         <NavigationItem text="Menu" link="menu" />
         <NavigationItem text="Reservations" link="reservations" />
         <NavigationItem text="Order Online" link="order" />
-        <NavigationItem text="Login" link="#" />
       </ul>
     </nav>
   );
