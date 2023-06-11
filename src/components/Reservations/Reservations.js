@@ -1,8 +1,10 @@
 import { useRef, useState } from "react";
-import classes from "./Reservations.module.css";
 import { useEffect } from "react";
 import MainBtn from "../../Utlities/MainBtn";
 import { createPortal } from "react-dom";
+import MainButton from "../../Utlities/MainLinkButton";
+
+import classes from "./Reservations.module.css";
 
 const Reservations = () => {
   const [reservationsArr, setReservationsArr] = useState([]);
@@ -40,7 +42,7 @@ const Reservations = () => {
   };
 
   return (
-    <>
+    <section className={classes["res-section"]}>
       {createPortal(
         <dialog className={classes.popup} ref={dialogRef}>
           <p>Are you sure you want to cancel</p>
@@ -98,7 +100,8 @@ const Reservations = () => {
           )}
         </tbody>
       </table>
-    </>
+      <MainButton link="/booking" text="Reserve a Table" />
+    </section>
   );
 };
 
