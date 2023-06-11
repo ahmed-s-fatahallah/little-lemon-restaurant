@@ -4,11 +4,11 @@ import Footer from "./../components/FooterComponents/Footer";
 
 const Root = () => {
   return (
-    <body>
+    <>
       <Header />
       <Outlet />
       <Footer />
-    </body>
+    </>
   );
 };
 
