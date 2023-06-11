@@ -3,7 +3,6 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Booking from "./pages/Booking";
 import Home from "./pages/Home";
 import Root from "./pages/Root";
-import About from "./pages/About";
 import ReservationsPage from "./pages/Reservations";
 
 import {
@@ -11,6 +10,7 @@ import {
   submitAPI,
 } from "./JavaScript API file/raw.githubusercontent.com_Meta-Front-End-Developer-PC_capstone_master_api";
 import Confirmation from "./pages/Confirmation";
+import AboutPage from "./pages/About";
 
 const reducer = (state, action) => {
   if (action.type === "initialTimes") {
@@ -77,7 +77,7 @@ function App() {
         },
         {
           path: "about",
-          element: <About />,
+          element: <AboutPage />,
         },
         {
           path: "reservations",
