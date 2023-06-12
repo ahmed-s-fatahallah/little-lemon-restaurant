@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useReducer } from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import Booking from "./pages/Booking";
 import Home from "./pages/Home";
 import Root from "./pages/Root";
@@ -53,7 +53,7 @@ function App() {
     fetchData();
   }, [fetchData]);
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <Root />,
