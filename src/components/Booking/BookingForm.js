@@ -2,7 +2,6 @@ import { useEffect, useState, useContext } from "react";
 import { AppStore } from "../../store/Context";
 import MainBtn from "../../Utlities/MainBtn";
 import { fetchAPI } from "./../../JavaScript API file/raw.githubusercontent.com_Meta-Front-End-Developer-PC_capstone_master_api";
-import { useNavigate } from "react-router-dom";
 
 import classes from "./BookingForm.module.css";
 
@@ -46,8 +45,6 @@ const BookingForm = (props) => {
     const availableTimes = fetchAPI(chosenDate);
     setAvailableTimes(availableTimes);
   }, [dateInput, setAvailableTimes]);
-
-  const navigate = useNavigate();
 
   let isBtnDisabled = true;
 
@@ -125,7 +122,7 @@ const BookingForm = (props) => {
         occasion: occasionSelect,
       });
 
-      navigate(`confirmed/${id}`);
+      props.navigate(`confirmed/${id}`);
     }
   };
 
