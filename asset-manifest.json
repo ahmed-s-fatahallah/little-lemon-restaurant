@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.86f6e8df.css",
-    "main.js": "/static/js/main.5ebfa5c1.js",
-    "static/media/photo-1627393100177-b4297e79a5be.webp": "/static/media/photo-1627393100177-b4297e79a5be.180f16e5a8d22f62ce2d.webp",
-    "static/media/Mario and Adrian A resized.jpg": "/static/media/Mario and Adrian A resized.2ae82d1b6a9fd58181a3.jpg",
-    "static/media/restaurant.jpg": "/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
-    "static/media/greek salad.jpg": "/static/media/greek salad.49cba8c27f87242a86ef.jpg",
-    "static/media/Mario and Adrian b resized.jpg": "/static/media/Mario and Adrian b resized.bf4302955bcc8616b9ad.jpg",
-    "static/media/restauranfood.jpg": "/static/media/restauranfood.b5f584376112d0868c71.jpg",
-    "static/media/photo-1547212371-eb5e6a4b590c.webp": "/static/media/photo-1547212371-eb5e6a4b590c.932fecdce0cba7b5ab17.webp",
-    "static/media/bruchetta.jpg": "/static/media/bruchetta.89ce513d22a898c2d799.jpg",
-    "static/media/photo-1595152772835-219674b2a8a6.webp": "/static/media/photo-1595152772835-219674b2a8a6.bd1e637adb75701239f9.webp",
-    "static/media/Logo.svg": "/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
-    "static/media/photo-1542909168-82c3e7fdca5c.webp": "/static/media/photo-1542909168-82c3e7fdca5c.f52b2b10690526d393de.webp",
-    "static/media/motorbike.png": "/static/media/motorbike.169c5d7a364f79724b9f.png",
-    "static/media/Lemon-Logo.JPG": "/static/media/Lemon-Logo.37a2b14c7d3fddff92e9.JPG",
-    "static/media/star.png": "/static/media/star.618d11e122cbca3f8e9e.png",
-    "index.html": "/index.html",
-    "main.86f6e8df.css.map": "/static/css/main.86f6e8df.css.map",
-    "main.5ebfa5c1.js.map": "/static/js/main.5ebfa5c1.js.map"
+    "main.css": "/little-lemon-restaurant/static/css/main.713ba34b.css",
+    "main.js": "/little-lemon-restaurant/static/js/main.aca2c39e.js",
+    "static/media/photo-1627393100177-b4297e79a5be.webp": "/little-lemon-restaurant/static/media/photo-1627393100177-b4297e79a5be.180f16e5a8d22f62ce2d.webp",
+    "static/media/Mario and Adrian A resized.jpg": "/little-lemon-restaurant/static/media/Mario and Adrian A resized.2ae82d1b6a9fd58181a3.jpg",
+    "static/media/restaurant.jpg": "/little-lemon-restaurant/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
+    "static/media/greek salad.jpg": "/little-lemon-restaurant/static/media/greek salad.49cba8c27f87242a86ef.jpg",
+    "static/media/Mario and Adrian b resized.jpg": "/little-lemon-restaurant/static/media/Mario and Adrian b resized.bf4302955bcc8616b9ad.jpg",
+    "static/media/restauranfood.jpg": "/little-lemon-restaurant/static/media/restauranfood.b5f584376112d0868c71.jpg",
+    "static/media/photo-1547212371-eb5e6a4b590c.webp": "/little-lemon-restaurant/static/media/photo-1547212371-eb5e6a4b590c.932fecdce0cba7b5ab17.webp",
+    "static/media/bruchetta.jpg": "/little-lemon-restaurant/static/media/bruchetta.89ce513d22a898c2d799.jpg",
+    "static/media/photo-1595152772835-219674b2a8a6.webp": "/little-lemon-restaurant/static/media/photo-1595152772835-219674b2a8a6.bd1e637adb75701239f9.webp",
+    "static/media/Logo.svg": "/little-lemon-restaurant/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
+    "static/media/photo-1542909168-82c3e7fdca5c.webp": "/little-lemon-restaurant/static/media/photo-1542909168-82c3e7fdca5c.f52b2b10690526d393de.webp",
+    "static/media/motorbike.png": "/little-lemon-restaurant/static/media/motorbike.169c5d7a364f79724b9f.png",
+    "static/media/Lemon-Logo.JPG": "/little-lemon-restaurant/static/media/Lemon-Logo.37a2b14c7d3fddff92e9.JPG",
+    "static/media/star.png": "/little-lemon-restaurant/static/media/star.618d11e122cbca3f8e9e.png",
+    "index.html": "/little-lemon-restaurant/index.html",
+    "main.713ba34b.css.map": "/little-lemon-restaurant/static/css/main.713ba34b.css.map",
+    "main.aca2c39e.js.map": "/little-lemon-restaurant/static/js/main.aca2c39e.js.map"
   },
   "entrypoints": [
-    "static/css/main.86f6e8df.css",
-    "static/js/main.5ebfa5c1.js"
+    "static/css/main.713ba34b.css",
+    "static/js/main.aca2c39e.js"
   ]
 }
