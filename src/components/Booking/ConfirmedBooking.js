@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import classes from "./ConfirmedBooking.module.css";
 
-const ConfirmedBooking = () => {
+const ConfirmedBooking = (props) => {
   const [redirectTimer, setRedirectTimer] = useState(5);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -14,7 +13,7 @@ const ConfirmedBooking = () => {
     return () => {
       clearTimeout(timer);
       if (redirectTimer <= 1) {
-        navigate("/", { replace: true });
+        props.navigate("/", { replace: true });
       }
     };
   });
