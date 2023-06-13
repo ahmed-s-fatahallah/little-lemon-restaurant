@@ -24,4 +24,10 @@ a:active,
   .nav__list__item {
     font-size: 3rem;
   }
+  a:hover,
+  a:active,
+  .nav__list__item .active {
+    color: #333;
+    text-decoration: underline;
+  }
 }

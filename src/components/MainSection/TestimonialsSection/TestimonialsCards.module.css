@@ -2,19 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.218rem;
-
+  gap: 4rem;
+  flex-wrap: wrap;
   margin-top: 4.4rem;
-}
-
-@media screen and (max-width: 560px) {
-  .testimonials__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-
-    margin-top: 1rem;
-  }
 }

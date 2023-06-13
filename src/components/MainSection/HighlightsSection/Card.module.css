@@ -99,6 +99,7 @@
   .card {
     width: 60%;
     height: 52rem;
+    border-radius: 16px;
   }
   .card__img {
     display: block;

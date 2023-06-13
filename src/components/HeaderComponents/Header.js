@@ -2,11 +2,16 @@ import Navigation from "./Navigation";
 import logo from "./../../assets/Logo.svg";
 
 import classes from "./Header.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Header = () => {
+const Header = (props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isButtonActive, setIsButtonActive] = useState(false);
+
+  useEffect(() => {
+    setIsNavOpen(false);
+    setIsButtonActive(false);
+  }, [props.location]);
 
   const openNavHandler = () => {
     setIsNavOpen((navState) => !navState);

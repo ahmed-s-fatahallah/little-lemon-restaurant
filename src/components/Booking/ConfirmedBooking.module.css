@@ -18,6 +18,8 @@
   font-family: "Markazi Text";
   font-style: normal;
   font-weight: 500;
+
+  padding: 0 2rem;
 }
 
 .link:link,

@@ -1,11 +1,5 @@
 .main-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: [hero-start] 40rem [hero-end highlights-start] 75rem [highlights-end testimonials-start] 68rem [testimonials-end about-start] 58rem [about-end];
-}
-
-@media screen and (max-width: 560px) {
-  .main-content {
-    grid-template-rows: [hero-start] 40rem [hero-end highlights-start] auto [highlights-end testimonials-start] 68rem [testimonials-end about-start] 58rem [about-end];
-  }
+  grid-template-rows: [hero-start] 40rem [hero-end highlights-start] auto [highlights-end testimonials-start] auto [testimonials-end about-start] 58rem [about-end];
 }

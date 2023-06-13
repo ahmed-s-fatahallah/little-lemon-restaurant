@@ -122,7 +122,7 @@ const BookingForm = (props) => {
         occasion: occasionSelect,
       });
 
-      props.navigate(`confirmed/${id}`);
+      props.navigate(`confirm/${id}`);
     }
   };
 

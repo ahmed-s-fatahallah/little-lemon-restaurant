@@ -25,7 +25,7 @@ function App() {
           errorElement: <ErrorPage />,
         },
         {
-          path: "booking/confirmed/:id",
+          path: "booking/confirm/:id",
           element: <Confirmation />,
           errorElement: <ErrorPage />,
         },

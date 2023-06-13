@@ -63,43 +63,45 @@ const Reservations = () => {
         </dialog>,
         document.getElementById("popups")
       )}
-      <table className={classes.table}>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Number of Guests</th>
-            <th>Occasion</th>
-            <th>Cancellation</th>
-          </tr>
-        </thead>
-        <tbody>
-          {reservationsArr.length === 0 ? (
+      <div className={classes["table-container"]}>
+        <table className={classes.table}>
+          <thead>
             <tr>
-              <td colSpan={6}>You have no Reservations</td>
+              <th>Id</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Number of Guests</th>
+              <th>Occasion</th>
+              <th>Cancellation</th>
             </tr>
-          ) : (
-            reservationsArr.map((res, i) => (
-              <tr key={i}>
-                <td>{res.id}</td>
-                <td>{res.date}</td>
-                <td>{res.time}</td>
-                <td>{res.guests}</td>
-                <td>{res.occasion}</td>
-                <td>
-                  <MainBtn
-                    disabled={false}
-                    type="button"
-                    text="Cancel"
-                    onClick={cancelReservationHandler.bind(null, res.id)}
-                  />
-                </td>
+          </thead>
+          <tbody>
+            {reservationsArr.length === 0 ? (
+              <tr>
+                <td colSpan={6}>You have no Reservations</td>
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
+            ) : (
+              reservationsArr.map((res, i) => (
+                <tr key={i}>
+                  <td>{res.id}</td>
+                  <td>{res.date}</td>
+                  <td>{res.time}</td>
+                  <td>{res.guests}</td>
+                  <td>{res.occasion}</td>
+                  <td>
+                    <MainBtn
+                      disabled={false}
+                      type="button"
+                      text="Cancel"
+                      onClick={cancelReservationHandler.bind(null, res.id)}
+                    />
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
       <MainButton link="/booking" text="Reserve a Table" />
     </section>
   );
