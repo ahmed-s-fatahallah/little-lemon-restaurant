@@ -2,7 +2,8 @@ import Navigation from "./Navigation";
 import logo from "./../../assets/Logo.svg";
 
 import classes from "./Header.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -12,6 +13,25 @@ const Header = (props) => {
     setIsNavOpen(false);
     setIsButtonActive(false);
   }, [props.location]);
+
+  useEffect(() => {
+    const closeOnClickOutside = (event) => {
+      if (
+        event.target.closest(`.${classes.hamburger__container}`) ||
+        event.target.closest(`.${classes.header}`)
+      ) {
+        return;
+      }
+      setIsNavOpen(false);
+      setIsButtonActive(false);
+    };
+
+    window.removeEventListener("click", closeOnClickOutside);
+
+    return () => {
+      window.addEventListener("click", closeOnClickOutside);
+    };
+  }, [isNavOpen]);
 
   const openNavHandler = () => {
     setIsNavOpen((navState) => !navState);
@@ -27,7 +47,9 @@ const Header = (props) => {
       <div onClick={openNavHandler} className={buttonClasses}>
         <div className={classes.hamburger__container__btn}> </div>
       </div>
-      <img src={logo} alt="Little Lemon restaurant Logo" />
+      <Link to="/">
+        <img src={logo} alt="Little Lemon restaurant Logo" />
+      </Link>
       <Navigation className={isNavOpen} />
     </header>
   );
