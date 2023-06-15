@@ -2,7 +2,7 @@ import Navigation from "./Navigation";
 import logo from "./../../assets/Logo.svg";
 
 import classes from "./Header.module.css";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
