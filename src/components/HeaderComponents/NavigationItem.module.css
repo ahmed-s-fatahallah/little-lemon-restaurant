@@ -27,7 +27,7 @@ a:active,
   a:hover,
   a:active,
   .nav__list__item .active {
-    color: #333;
+    color: #d9d9d9;
     text-decoration: underline;
   }
 }
